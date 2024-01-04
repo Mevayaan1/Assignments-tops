@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Form Validation</title>
+    
+
+</head>
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body,
+    html {
+      height: 100%;
+      width: 100%;
+      background-color: rgb(231, 231, 231);
+      font-family: serif;
+
+    }
+
+    .main {
+      display: grid;
+      grid-template-columns: 200px 600px 200px;
+      /* grid-template-rows: auto auto auto auto; */
+      padding: 20px 50px;
+      gap: 20px;
+    }
+
+    h4{
+      font-weight: 400;
+    }
+
+    .right {
+      grid-column: 1/ 2;
+      display: grid;
+      grid-template-rows: 30px 30px 30px 30px 30px 30px 200px 30px 30px 30px 30px 100px 30px 50px;
+      gap: 10px;
+    }
+
+    .left {
+      grid-column: 2/3;
+      display: grid;
+      grid-template-rows: 30px 30px 30px 30px 30px 30px 200px 30px 30px 30px 30px 100px 30px 50px;
+      gap: 10px;
+    }
+
+    input{
+        height: 100%;
+    }
+
+    #box1,#box2,#box3{
+        height: 10px;
+    }
+
+    .but{
+        color: white;
+        background-color: rgb(113, 206, 21);
+        /* padding: 5px 10px; */
+        border: 2px solid black;
+        width: 60px;
+        height: 30px;
+    }
+
+
+</style>
+<body>
+<div class="main">    
+    <div class="right">
+        <h4>fist name</h4>
+
+        <h4>last name</h4>
+
+        <h4>email</h4>
+
+        <h4>Mobile</h4>
+
+        <h4>Gender</h4>
+
+        <h4>Date of Birth</h4>
+
+        <h4>Address</h4>
+
+        <h4>City</h4>
+
+        <h4>AreaPIN</h4>
+
+        <h4>State</h4>
+
+        <h4>Qualification</h4>
+
+        <h4>Spacialization</h4>
+
+        <h4>Password</h4>
+      </div>
+    
+    <form aciton ="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post" class="left">
+        <!-- fname  -->
+        <div class="formdesign" id="fname">
+            <input type="text" name="fsname" required placeholder="frist name"><b><span class="formerror"> </span></b>
+        </div>
+
+        <!-- lname  -->
+
+        <div class="formdesign" id="lname">
+            <input type="text" name="lsname" required placeholder="last name"><b><span class="formerror"> </span></b>
+        </div>
+
+         <!-- email  -->
+        <div class="formdesign" id="email">
+            <input type="email" name="femail" required placeholder="email"><b><span class="formerror"> </span></b>
+        </div>
+
+        <!-- mobile  -->
+
+        <div class="formdesign" id="phone">
+            <input type="phone" name="fphone" required placeholder="mobile"><b><span class="formerror"></span></b>
+        </div>
+
+        <!-- gender  -->
+        <div class="formdesign" id="gender">
+            <input type="radio" name="fgender" value="male" required>Male
+            <input type="radio" name="fgender" value="female" required>Female
+            <b><span class="formerror"></span></b>
+          </div>
+        
+        <!-- Dob  -->
+        <div class="formdesign" id="Dob">
+            <input type="date" name="date" required><b><span class="formerror"</span></b>
+        </div>
+
+        <!-- address  -->
+
+        <div class="formdesign" id="add">
+            <textarea name="add" id="add" cols="30" rows="10" required></textarea><b><span class="formerror"</span></b>
+           
+        </div>
+
+        <!-- city  -->
+
+        <div class="formdesign" id="city">
+            <input type="text" name="city" required placeholder="city"><b><span class="formerror"> </span></b>
+        </div>
+
+        <!-- PIN  -->
+
+        <div class="formdesign" id="PIN">
+            <input type="number" name="fphone" required placeholder="PIN"> <b><span class="formerror"></span></b>
+        </div>
+
+        <!-- state  -->
+
+        <div class="formdesign" id="state">
+            <input type="text" name="fphone" required placeholder="state"><b><span class="formerror"></span></b>
+        </div>
+
+        <!-- Qualification  -->
+    <div>
+
+        <select name="" id="Qly" required >
+            <option value="">Graduate</option>
+            <option value="">undergrade</option>
+        </select><b><span class="formerror"></span></b>
+    </div>
+        <!-- specialization  -->
+        
+        <div class="formdesign" id="speci">
+            <input type="checkbox" name="" id="box1" /><label for=""
+            >Computer Science</label
+          ><br />
+          <input type="checkbox" name="" id="box2" /><label for=""
+            >information tech</label
+          ><br />
+          <input type="checkbox" name="" id="box3" /><label for=""
+            >Computer Aplication</label
+          ></span></b>
+        </div>
+
+        <div class="formdesign" id="pass">
+            <input type="password" name="fpass" required><b><span class="formerror"</span></b>
+        </div>
+
+
+        <input class="but" type="submit" value="Submit">
+
+    </form>
+</div>
+</body>
+
+<script>
+    function clearErrors(){
+
+errors = document.getElementsByClassName('formerror');
+for(let item of errors)
+{
+    item.innerHTML = "";
+}
+  
+
+}
+function seterror(id, error){
+//sets error inside tag of id 
+element = document.getElementById(id);
+element.getElementsByClassName('formerror')[0].innerHTML = error;
+
+}
+
+function validateForm(){
+var returnval = true;
+clearErrors();
+
+//perform validation and if validation fails, set the value of returnval to false
+var fsname = document.forms['myForm']["fsname"].value;
+if (fsname.length<5){
+    seterror("fname", "*Length of name is too short");
+    returnval = false;
+    console.log("false")
+}
+
+if (fsname.length == 0){
+    seterror("fname", "*Length of name cannot be zero!");
+    returnval = false;
+}
+
+var lsname = document.forms['myForm']["lsname"].value;
+if (lsname.length<5){
+    seterror("lname", "*Length of name is too short");
+    returnval = false;
+    console.log("false")
+}
+
+if (lsname.length == 0){
+    seterror("lname", "*Length of name cannot be zero!");
+    returnval = false;
+}
+
+var email = document.forms['myForm']["femail"].value;
+if (email.length>15){
+    seterror("email", "*Email length is too long");
+    returnval = false;
+}
+
+var phone = document.forms['myForm']["fphone"].value;
+if (phone.length != 10){
+    seterror("phone", "*Phone number should be of 10 digits!");
+    returnval = false;
+}
+
+
+
+return returnval;
+}
+
+
+</script>
+</html>
+
+</body>
+</html>
