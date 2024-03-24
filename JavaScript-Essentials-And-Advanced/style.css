@@ -1,0 +1,94 @@
+body
+{
+    background-color: rgb(80, 58, 100);
+}
+.parent{
+    border: 2px solid black;
+    height: 360px;
+    width: 350px;
+    background-color: rgb(198, 123, 163);
+    margin-left: 560px;
+    margin-top: 130px;
+    box-shadow: 0px 0px 20px 20px rgb(217, 0, 255);
+    border-radius: 20px;
+
+}
+.child
+{
+    margin-left: 70px;
+    margin-top: 80px;
+}
+.child input
+{
+    /* margin-left: 150px; */
+    /* margin-top: 80px; */
+    height: 30px;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-left: -20px;
+
+}
+.child .pointer
+{
+    /* margin-left: 150px; */
+    /* margin-top: 80px; */
+    /* height: 30px; */
+    /* width: 200px; */
+    cursor: pointer;
+ margin-left: -27px;
+
+}
+.child-1 .pointer
+{
+ cursor: pointer;
+ margin-left: -27px;
+}
+.child-1
+{
+    margin-left: 70px;
+    /* margin-top: 80px; */
+}
+.child-1 input
+{
+    height: 30px;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-left: -20px;
+
+}
+.child  h2{
+    margin-top: 17px;
+    position: absolute;
+    top: 140px;
+    margin-left: 40px;
+    font-family: 'Afacad', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+}
+.child-2
+{
+    margin-left: 109px;
+    margin-top: 38px;
+    
+}
+.child-2 input
+{
+    /* margin-left: 129px; */
+    /* margin-top: 20px; */
+    height: 39px;
+    width: 130px;
+   border-radius: 10px;
+
+}
+.child-2 :hover{
+    border: none;
+    font-family: 'Inter', sans-serif;
+
+
+}
+

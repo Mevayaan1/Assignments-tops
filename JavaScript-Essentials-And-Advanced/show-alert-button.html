@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Classes</title>
+  <script>
+    function showAlert() {
+      var allElements = document.querySelectorAll('.myClass');
+      allElements.forEach(function(element) {
+        alert(element.innerText);
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="myClass">Class 1</div>
+  <div class="myClass">Class 2</div>
+  <div class="myClass">Class 3</div>
+  <button onclick="showAlert()">Show Alert</button>
+</body>
+</html>
